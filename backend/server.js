@@ -4,6 +4,7 @@ const cors = require('cors')
 const app = express()
 const getShortestPathModules = require('./getShortestPath')
 const sendMessage = require('./twilio')
+// const { response } = require('express')
 
 // Middleware
 app.use(
@@ -16,7 +17,8 @@ app.use(cors())
 app.use(morgan('tiny'))
 
 // Static page from React build
-app.use('/', express.static('../frontend/build/'))
+// app.use('/', express.static('../frontend/build/'))
+
 
 // Serve API
 app.post('/api', (request, response) => {
