@@ -36,13 +36,13 @@ app.post('/api', (request, response) => {
 })
 
 // Twilio API
-app.post('/twilio', (request, response) => {
-  const { path, distance, number } = request.body
-  const origin = path[0]
-  const destination = path[path.length - 1]
-  const message = `The shortest path from ${origin} to ${destination} is ${path}. Distance: ${distance}`
-  sendMessage(number, message)
-})
+// app.post('/twilio', (request, response) => {
+//   const { path, distance, number } = request.body
+//   const origin = path[0]
+//   const destination = path[path.length - 1]
+//   const message = `The shortest path from ${origin} to ${destination} is ${path}. Distance: ${distance}`
+//   sendMessage(number, message)
+// })
 
 const PORT = 3001
 app.listen(PORT, () => {
