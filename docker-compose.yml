@@ -1,13 +1,21 @@
 version: "3.9"  # optional since v1.27.0
 services:
-  app:
-    build: .
+  frontend-app:
+    build: ./frontend
     # ports:
       # - "3000:80"
       # - "80:80"
       # - "3000:3000" #dev
     volumes:
-      - .:/usr/src/app
+      - ./frontend:/usr/src/app
+
+  backend-app:
+    build: ./backend
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./backend:/usr/src/app
+
   nginx:
     image: nginx:1.20.1
     volumes:
@@ -16,4 +24,4 @@ services:
       - 8080:80
     container_name: reverse-proxy
     depends_on:
-      - app # wait for the frontend container to be started
+      - frontend-app # wait for the frontend container to be started
