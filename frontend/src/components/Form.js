@@ -11,7 +11,7 @@ const Form = ({ setPath, setDistance }) => {
   const handleSubmit = e => {
     e.preventDefault();
     const content = { route: route, origin: origin, destination: destination };
-    axios.post("http://localhost:3001/api", content).then(response => {
+    axios.post("http://localhost:8080/api", content).then(response => {
       const { distance, path } = response.data;
       setDistance(distance);
       setPath(path);
