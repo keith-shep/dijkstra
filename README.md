@@ -1,5 +1,9 @@
 This web app aims calculate the shortest path between 2 nodes using Dijkstra's Algorithm. It also allows sending of results via Twilio SMS to a phone number. Tested on Ubuntu 20.04.1 LTS.
 
+Quickstart with docker compose
+Run `docker-compose up` to set up all containers
+
+
 ---
 
 Setup
