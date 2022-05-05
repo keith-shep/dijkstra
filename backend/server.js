@@ -3,7 +3,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 const app = express()
 const getShortestPathModules = require('./getShortestPath')
-const sendMessage = require('./twilio')
+// const sendMessage = require('./twilio')
 // const { response } = require('express')
 
 // Middleware
