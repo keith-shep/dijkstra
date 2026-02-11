@@ -61,3 +61,7 @@ Entry file is `App.js` and `Index.js`
 - I->E 20
 - G->H 11
 - B->B 0
+
+# Screenshot
+<img width="563" height="534" alt="image" src="https://github.com/user-attachments/assets/28dda3fc-1925-45fa-8ea3-e4fa6a250dca" />
+
