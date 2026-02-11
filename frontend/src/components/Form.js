@@ -15,6 +15,8 @@ const Form = ({ setPath, setDistance }) => {
       const { distance, path } = response.data;
       setDistance(distance);
       setPath(path);
+    }).catch(error => {
+      console.error("There was an error processing the request!", error);
     });
   };
 
