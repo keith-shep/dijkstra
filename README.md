@@ -53,3 +53,11 @@ The frontend is built on React and useState hooks. It mainly fetches data via th
 The React portion is modified in the `/frontend` directory. For it to be built, the command `"npm run build:ui"` builds the build folder and copies it to the backend directory.
 
 Entry file is `App.js` and `Index.js`
+
+
+# Test
+- `"AB4, AD6, AG2, BC1, BD5, BE10, CH4, CI7, DE4, DK8, EC2, EI7, FA3, GE5, GF14, GK4, HC4, IH1, IJ3, JG12, JH12, KF7, KG4"`
+- A->F 13
+- I->E 20
+- G->H 11
+- B->B 0
