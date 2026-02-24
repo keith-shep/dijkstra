@@ -58,7 +58,7 @@ const buildAdjacencyList = (nodes: node[], edges: edge[]) => {
 }
 
 // //-------------------------------------------//
-const getShortestPath = (adjacencyList, queryFrom, queryTo, nodes) => {
+const getShortestPath = (adjacencyList, queryFrom: node, queryTo: node, nodes: node[]) => {
   const queue = [...nodes]
   const shortestPathList = {}
 
@@ -71,7 +71,7 @@ const getShortestPath = (adjacencyList, queryFrom, queryTo, nodes) => {
   shortestPathList[queryFrom].cost = 0
 
   // Processes one iteration of short paths, and returns the next reccomended node to process
-  const relaxNode = startNode => {
+  const relaxNode = (startNode: node) => {
     // Checking if empty queue, ie condition to stop recursion
     if (queue.length === 0) {
       return
