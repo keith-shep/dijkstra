@@ -6,7 +6,7 @@
 // 2 buildAdjacencyList takes in the nodes and edges and builds an adjacency list to operate the algo on
 // 3 getShortestPath runs Dijkstra's algo and returns the shortest path as well as it's distance
 
-const parseInput = input => {
+const parseInput = (input: string) => {
   const nodes = []
   const edges = []
 
