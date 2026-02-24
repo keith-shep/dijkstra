@@ -35,19 +35,19 @@ const parseInput = (input: string) => {
 
 // -------------------------------------------//
 
-const buildAdjacencyList = (nodes, edges) => {
+const buildAdjacencyList = (nodes: node[], edges: edge[]) => {
   const adjacencyList = {}
 
   // Add nodes to adjacency list
-  nodes.forEach(node => {
+  nodes.forEach((node: node) => {
     adjacencyList[node] = []
   })
 
   // Add edges to adjacency list
-  edges.forEach(edge => {
-    const origin = edge[0]
-    const destination = edge[1]
-    const cost = edge[2]
+  edges.forEach((edge: edge) => {
+    const origin: node = edge[0]
+    const destination: node = edge[1]
+    const cost: number = edge[2]
 
     const pathDetails = {}
     pathDetails[destination] = cost
