@@ -1,7 +1,7 @@
 # Dev - nodemon and npm i
 # Prod - node and npm ci
 
-FROM node:16-alpine3.14
+FROM node:22.18-alpine
 
 WORKDIR /usr/src/app
 
