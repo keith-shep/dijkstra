@@ -7,6 +7,7 @@
 // 3 getShortestPath runs Dijkstra's algo and returns the shortest path as well as it's distance
 type node = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z'
 type edge = [node, node, number]
+type adjacencyList = { [key in node]?: Record<node, number>[] }
 
 const parseInput = (input: string) => {
   const nodes: node[] = []
@@ -36,7 +37,7 @@ const parseInput = (input: string) => {
 // -------------------------------------------//
 
 const buildAdjacencyList = (nodes: node[], edges: edge[]) => {
-  const adjacencyList = {}
+  const adjacencyList: adjacencyList = {}
 
   // Add nodes to adjacency list
   nodes.forEach((node: node) => {
@@ -58,7 +59,7 @@ const buildAdjacencyList = (nodes: node[], edges: edge[]) => {
 }
 
 // //-------------------------------------------//
-const getShortestPath = (adjacencyList, queryFrom: node, queryTo: node, nodes: node[]) => {
+const getShortestPath = (adjacencyList: adjacencyList, queryFrom: node, queryTo: node, nodes: node[]) => {
   const queue = [...nodes]
   const shortestPathList = {}
 
