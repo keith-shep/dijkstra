@@ -5,22 +5,22 @@
 // 1 parseInput takes in a string ie "AB2, CD3, EF7" and turns them into nodes and edges
 // 2 buildAdjacencyList takes in the nodes and edges and builds an adjacency list to operate the algo on
 // 3 getShortestPath runs Dijkstra's algo and returns the shortest path as well as it's distance
+type node = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' | 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z'
+type edge = [node, node, number]
 
 const parseInput = (input: string) => {
-  const nodes = []
-  const edges = []
-
+  const nodes: node[] = []
+  const edges: edge[] = []
   // Parse string input into edges and nodes
   const elements = input.split(', ')
   elements.forEach(element => {
     // Extract locations and cost
-    const fromLocation = element[0]
-    const toLocation = element[1]
+    const fromLocation: node = element[0] as node
+    const toLocation: node = element[1] as node
     const cost = parseInt(element.substr(2))
 
     // Create edge and push into edges array
-    const edge = []
-    edge.push(fromLocation, toLocation, cost)
+    const edge: edge = [fromLocation, toLocation, cost]
     edges.push(edge)
 
     // Create and push node into nodes array if unique
